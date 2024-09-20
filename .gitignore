@@ -1,9 +1,7 @@
-.DS_Store
-test.html
-thirdparty/jwplayer.*
-thirdparty/jquery-*.js
+dist/
 node_modules/
 npm-debug.log
-translations/???.js
+.DS_Store
 .idea
 .htaccess
+.eslintcache
