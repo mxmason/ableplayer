@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Able Player</title>
+		<link rel="stylesheet" href="./styles.css" />
+		<link rel="stylesheet" href="./ableplayer.css" />
+		<script type="module" async>
+			import { AblePlayer } from './ableplayer.js';
+			AblePlayer.register();
+		</script>
+	</head>
+
+	<body>
+		<h1>Video with closed captions in one language</h1>
+
+		<able-player>
+			<video
+				height="360"
+				poster="./media/wwa.jpg"
+				preload="auto"
+				width="480"
+				controls
+				playsinline
+			>
+				<source type="video/mp4" src="./media/wwa.mp4" />
+				<source type="video/webm" src="./media/wwa.webm" />
+				<track
+					kind="captions"
+					label="English captions"
+					src="./media/wwa_captions_en.vtt"
+					srclang="en"
+				/>
+			</video>
+		</able-player>
+	</body>
+</html>

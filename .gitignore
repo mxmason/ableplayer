@@ -1,0 +1,10 @@
+# Ignore build output
+dist/
+# Ignore node_modules
+node_modules/
+# Ignore miscellany
+npm-debug.log
+.DS_Store
+.idea
+.htaccess
+.eslintcache

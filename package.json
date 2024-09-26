@@ -1,0 +1,71 @@
+{
+  "name": "ableplayer",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Accessible media player as a native custom element",
+  "bugs": {
+    "url": "https://github.com/mxmason/ableplayer/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mxmason/ableplayer.git"
+  },
+  "files": [
+    "dist/ableplayer.js",
+    "dist/ableplayer.css"
+  ],
+  "main": "./dist/ableplayer.js",
+  "module": "./dist/ableplayer.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ableplayer.js"
+    },
+    "./dist/*.css": {
+      "import": "./dist/*.css"
+    }
+  },
+  "scripts": {
+    "prepare": "husky",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "test": "jest -c ./jest/config.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-replace": "^6.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@swc/core": "^1.7.28",
+    "@swc/jest": "^0.2.36",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.13",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^28.8.3",
+    "globals": "^15.9.0",
+    "husky": "^9.1.6",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^15.2.10",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-serve": "^1.1.1"
+  },
+  "keywords": [],
+  "author": "",
+  "lint-staged": {
+    "*.{js,cjs}": [
+      "eslint --cache --fix",
+      "prettier --cache --write"
+    ],
+    "*.{css,html,md}": "prettier --cache --write"
+  }
+}

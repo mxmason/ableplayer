@@ -1,0 +1,12 @@
+:root {
+	--able-player-gap: 4px;
+}
+.able-player-controls {
+	display: flex;
+	flex-direction: row;
+	gap: var(--able-player-gap);
+
+	& > * {
+		display: max-content;
+	}
+}
